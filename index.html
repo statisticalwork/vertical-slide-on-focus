@@ -8,14 +8,14 @@
 
 
 <style type="text/css">
-#panel,#flip
+#vslide,#slide
 {
 padding:5px;
 text-align:center;
 background-color:#e5eecc;
 border:solid 1px #000;
 }
-#panel
+#vslide
 {
 padding:50px;
 display:none;
@@ -74,9 +74,9 @@ Lorem ipsum dolore <br>
 Lorem ipsum dolore <br>
 Lorem ipsum dolore <br>
 Lorem ipsum dolore <br>
-<div id="importantdiv">This is the trigger div</div>
-<div id="flip">Click to slide down panel</div>
-<div id="panel">Hello world!</div>
+<div id="triggerdiv">This is the trigger div</div>
+<div id="slide">Optional header or text</div>
+<div id="vslide">Youtube video here or else</div>
 
 <br>
 Lorem ipsum dolore <br>
@@ -150,13 +150,13 @@ Lorem ipsum dolore <br>
     }
 
     VisibilityMonitor(
-        document.getElementById('importantdiv'),
+        document.getElementById('triggerdiv'),
         function() {
-        $("#panel").slideDown("slow");
-         alert('div is on view!');
+        $("#vslide").slideDown("slow");
+         alert('Confirm to show the vertical slide');
         },
         function() {
-            alert('div gone away!');
+            alert('loose focus!');
         }
     );
 
